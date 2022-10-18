@@ -1,0 +1,14 @@
+/*
+ * ultrasonic.c
+ *
+ *  Created on: Oct 12, 2022
+ *      Author: ahmed
+ */
+
+#include "icu.h"
+#include "ultrasonic.h"
+
+void ULTRASONIC_init(){
+	Icu_ConfigType icuConfig = {F_CPU_8,RISING};
+	Icu_init(&icuConfig);
+}

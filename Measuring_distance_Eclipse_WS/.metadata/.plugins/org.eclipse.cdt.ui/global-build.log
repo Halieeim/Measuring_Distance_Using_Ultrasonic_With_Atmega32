@@ -1,0 +1,80 @@
+09:06:46 **** Incremental Build of configuration Debug for project Measuring_distance ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:214: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../measuring_distance.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"measuring_distance.d" -MT"measuring_distance.o" -c -o "measuring_distance.o" "../measuring_distance.c"
+Finished building: ../measuring_distance.c
+ 
+Building file: ../ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ultrasonic.d" -MT"ultrasonic.o" -c -o "ultrasonic.o" "../ultrasonic.c"
+In file included from ../ultrasonic.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultrasonic.c
+ 
+Building target: Measuring_distance.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Measuring_distance.map -mmcu=atmega32 -o "Measuring_distance.elf"  ./gpio.o ./icu.o ./lcd.o ./measuring_distance.o ./ultrasonic.o   
+Finished building target: Measuring_distance.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Measuring_distance.elf  >"Measuring_distance.lss"
+Finished building: Measuring_distance.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Measuring_distance.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9706 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        287 bytes (14.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:07:48 **** Incremental Build of configuration Debug for project Measuring_distance ****
+make all 
+Building file: ../ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ultrasonic.d" -MT"ultrasonic.o" -c -o "ultrasonic.o" "../ultrasonic.c"
+In file included from ../ultrasonic.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultrasonic.c
+ 
+Building target: Measuring_distance.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Measuring_distance.map -mmcu=atmega32 -o "Measuring_distance.elf"  ./gpio.o ./icu.o ./lcd.o ./measuring_distance.o ./ultrasonic.o   
+Finished building target: Measuring_distance.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Measuring_distance.elf  >"Measuring_distance.lss"
+Finished building: Measuring_distance.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Measuring_distance.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9012 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:         31 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

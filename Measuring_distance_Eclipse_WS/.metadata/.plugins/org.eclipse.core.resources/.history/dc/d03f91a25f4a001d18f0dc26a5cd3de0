@@ -1,0 +1,45 @@
+/*
+ * ultrasonic.c
+ *
+ *  Created on: Oct 12, 2022
+ *      Author: ahmed
+ */
+
+#include "icu.h"
+#include "ultrasonic.h"
+#include "gpio.h"
+#include "util/delay.h"
+#include "common_macros.h"
+
+void Ultrasonic_edgeProcessing(void){
+
+}
+
+void ULTRASONIC_init(){
+	/* initializing ICU */
+	Icu_ConfigType icuConfig = {F_CPU_8,RISING};
+	Icu_init(&icuConfig);
+	Icu_setCallBack(Ultrasonic_edgeProcessing);
+
+	/* setting PB5 (triger pin) as output pin */
+	GPIO_setupPinDirection(PORTB_ID, PIN5_ID, PIN_OUTPUT);
+}
+
+
+void Ultrasonic_Trigger(void){
+	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_HIGH);
+	_delay_us(10);
+	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_LOW);
+}
+
+uint16 Ultrasonic_readDistance(void){
+	Ultrasonic_Trigger();
+	Icu_clearTimerValue();
+	Icu_setEdgeDetectionType(FALLING);
+	while()
+
+}
+
+
+
+

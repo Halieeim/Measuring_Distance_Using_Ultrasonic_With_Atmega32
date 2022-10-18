@@ -1,0 +1,21 @@
+/*
+ * measuring_distance.c
+ *
+ *  Created on: Oct 12, 2022
+ *      Author: ahmed
+ */
+
+
+#include "ultrasonic.h"
+#include "lcd.h"
+#include "avr/io.h"
+
+int main(){
+	ULTRASONIC_init();
+	LCD_init();
+
+
+	for(;;){
+
+	}
+}
